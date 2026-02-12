@@ -1,0 +1,7 @@
+/* basic page reset and default type */
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+/* small helper to center content if needed elsewhere */
+.container{max-width:1200px;margin:0 auto;padding:0 20px}

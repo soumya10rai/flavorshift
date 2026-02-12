@@ -1,0 +1,50 @@
+:root{
+  --bg:#0f1720;
+  --grid:#21303a;
+  --accent:#3bd07b;
+  --pill:#d9ff4a;
+  --muted:#9aa6b0;
+}
+
+html,body,#root{height:100%;}
+body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:#fff}
+
+.app-wrapper{position:relative;min-height:100vh;overflow-y:auto;scroll-snap-type:y mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;background-color:var(--bg);
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size:48px 48px,48px 48px;
+}
+
+.app-wrapper::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.25), transparent 40%);mix-blend-mode:overlay;pointer-events:none}
+
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:transparent
+}
+
+.bg-decor{position:absolute;border-radius:50%;filter:blur(6px);opacity:.9}
+.circle-a{width:360px;height:360px;right:-80px;top:-60px;background:radial-gradient(circle at 20% 20%, rgba(107,164,196,0.35), rgba(73,116,146,0.12))}
+.circle-b{width:260px;height:260px;left:-90px;bottom:-80px;background:radial-gradient(circle at 70% 70%, rgba(173,185,211,0.22), rgba(80,96,124,0.06))}
+
+.bg-dots{position:absolute;right:28px;top:44px;width:260px;height:260px;background:radial-gradient(circle, rgba(255,255,255,0.08) 8%, transparent 9%);background-size:22px 22px;opacity:.6;border-radius:8px;transform:rotate(-18deg)}
+
+.hero-inner{position:relative;z-index:5;max-width:1100px;padding:24px;display:flex;flex-direction:column;gap:20px;align-items:center;justify-content:center;min-height:100vh;text-align:center}
+
+.header{display:flex;flex-direction:column;gap:8px}
+.brand{font-size:88px;line-height:0.95;margin:0;font-weight:800;letter-spacing:-1px}
+.brand--green{color:#2ed07a}
+.brand--white{color:#ffffff}
+.brand--dot{color:var(--accent);margin-left:6px}
+
+.subtitle{margin:0;color:var(--muted);font-weight:600;letter-spacing:1px}
+
+.pill{background:var(--pill);color:#071014;padding:22px 28px;border-radius:999px;font-weight:700;font-size:20px;box-shadow:0 8px 30px rgba(0,0,0,0.5);max-width:900px}
+
+.team{display:none}
+
+@media (max-width:800px){
+  .brand{font-size:48px}
+  .pill{font-size:16px;padding:14px 18px}
+  .app-wrapper{background-size:32px 32px}
+}
+
