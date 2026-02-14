@@ -1,0 +1,21 @@
+Example 1:
+
+Input:
+{
+  "old_ing": "cumin",
+  "new_ing": "oregano",
+  "user_pref": {
+    "spice_tolerance": "low",
+    "diet": "vegan",
+    "low_sodium": true
+  }
+}
+
+Output:
+{
+  "swap": "cumin → oregano",
+  "impact": "+herbal -smoky",
+  "confidence": 0.87,
+  "explanation": "Replacing cumin with oregano increases herbal and reduces smoky.",
+  "cultural_reason": "Oregano is common in Mediterranean cuisine and shares aromatic compounds with cumin."
+}
